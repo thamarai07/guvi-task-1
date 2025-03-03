@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style1.css">
+</head>
+
+<body>
+    <header class="container m-auto">
+        <nav>
+            <div class="desktop">
+                <div class="navbar padding-fit">
+                    <img src="./assets/navbar/Logo.png" alt="logo">
+                    <ul class="nav-item">
+                        <li>Home</li>
+                        <li>About</li>
+                        <li>Destination</li>
+                        <li>Tour</li>
+                        <li>Blog</li>
+                    </ul>
+
+                    <ul class="nav-btn">
+                        <li><button>Login</button></li>
+                        <li><button>Sign Up</button></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mobile">
+                <div class="navbar">
+                    <img src="./assets/navbar/Logo.png" alt="logo">
+                    <div class="mobile_menu_container">
+                        <div id="hamburger" class="hamburger">
+                            <span class="line_1"></span>
+                            <span class="line_2"></span>
+                            <span class="line_3"></span>
+                        </div>
+                    </div>
+                    <div class="mobile_menu">
+                        <ul>
+                            <li>Home</li>
+                            <li>About</li>
+                            <li>Destination</li>
+                            <li>Tour</li>
+                            <li>Blog</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+    </header>
+
+    <section class="container m-auto hero padding-fit">
+        <div class="hero_title_wrap">
+            <h1>Get started your exciting <span> journey</span>
+                with us.
+            </h1>
+            <p>
+                A Team of experienced tourism professionals will provide you with the best advice and tips for your
+                desire place.
+            </p>
+            <button>
+                Discover Now
+            </button>
+        </div>
+        <div class="hero_banner_wrap">
+            <img src="./assets/hero/hero-bg-2.png" style="width: 100%;" alt="hero">
+            <p class="hero_info_1">
+
+                <img src="./assets/hero/hero-bg-element-1.png" alt="">
+                <span>Best Tour <br>
+                    Awards</span>
+            </p>
+
+            <p class="hero_info_2">
+                <img src="./assets/hero/hero-bg-element-3.png" alt="">
+                <span>
+                    <span>27K</span>
+                    <span>Customer Reviewd</span>
+                </span>
+            </p>
+            <p class="hero_info_3">
+
+                <img src="./assets/hero/hero-bg-element-2.png" alt="">
+                <span>
+                    <span>Explore </span>
+                    <span>Every cornar of the world with us</span>
+                </span>
+            </p>
+        </div>
+    </section>
+    <section class="container search m-auto">
+        <div class="search_box">
+            <p class="location">Location</p>
+            <ul class="location_options hide">
+                <li data-location="Chennai" class="location_value">Chennai</li>
+                <li data-location="Madurai" class="location_value">Madurai</li>
+                <li data-location="Trichy" class="location_value">Trichy</li>
+            </ul>
+            <p class="hide location_selected_value"></p>
+        </div>
+
+        <div class="search_box">
+            <p class="date_box">Date</p>
+            <input type="text" class="date_box_input hide" readonly id="dateInput" placeholder="Select Date">
+        </div>
+
+        <div class="calendar-popup hide" id="calendarPopup">
+            <div class="calendarP-header">
+                <button id="prevMonth">&lt;</button>
+                <span id="currentMonthYear"></span>
+                <button id="nextMonth">&gt;</button>
+            </div>
+            <div class="calender-days">
+                <div class="day">Sun</div>
+                <div class="day">Mon</div>
+                <div class="day">Tue</div>
+                <div class="day">Wed</div>
+                <div class="day">Thu</div>
+                <div class="day">Fri</div>
+                <div class="day">Sat</div>
+            </div>
+            <div id="calendarDates" class="calendar-dates"></div>
+        </div>
+
+
+        <div class="search_box">
+            <p class="guest_box">Guest</p>
+            <input type="number" oninput="handleguest()" class="hide guest_box_input" value="">
+            <br>
+            <span class="hide worning"></span>
+        </div>
+        <div class="search_btn">
+            <button>Explore Now</button>
+        </div>
+    </section>
+    <section class="container todo m-auto section-padding">
+        <h3 class="todo_title">Things you need <span> to do </span></h3>
+        <p class="todo_para">
+            We ensure that you’ll embark on a perfectly planned, safe vacation at a price you can afford.
+        </p>
+        <div class="todo_cards">
+            <div class="todo_card">
+                <img src="./assets/todo/signup.png" alt="">
+                <p class="todo_card_title">Sign Up</p>
+                <p class="todo_card_para">Completes all the work associated with planning and processing</p>
+            </div>
+            <div class="todo_card">
+                <img src="./assets/todo/money.png" alt="">
+                <p class="todo_card_title">Worth of Money</p>
+                <p class="todo_card_para">After successful access then book from exclusive deals & pricing</p>
+            </div>
+            <div class="todo_card">
+                <img src="./assets/todo/travel.png" alt="">
+                <p class="todo_card_title">Worth of Money</p>
+                <p class="todo_card_para">Start and explore a wide range of exciting travel experience.</p>
+            </div>
+        </div>
+    </section>
+    <section class="container dd m-auto section-padding">
+        <h3 class="dd_title">Exclusive <span>deals & discounts </span></h3>
+        <p class="dd_para">Discover our fantastic early booking discounts & start planning your journey.</p>
+
+        <div class="dd_carousel_container">
+            <div class="dd_carousel">
+                <div class="dd_carousel_item">
+                    <div class="dd_carousel_img_container">
+                        <img src="./assets/deals/img-4.png" alt="">
+                        <a href="" class="dd_carousel_ctn">Book Now</a>
+                    </div>
+                    <div class="dd_carousel_body">
+                        <div class="dd_carousel_body-top">
+                            <p class="title">Madrid</p>
+                            <span class="rating">
+                                <img src="./assets/deals/star.png" alt="">
+                                <span>4.8</span>
+                            </span>
+                        </div>
+                        <div class="dd_carousel_body-bottom">
+                            <span class="location">
+                                <img src="./assets/deals/pointer.png" alt="">
+                                <span>Spain</span>
+                            </span>
+                            <span class="price">
+                                <del>$950</del>
+                                <span>$850</span>
+                            </span>
+                        </div>
+                    </div>
+                    <a href="" class="dd_carousel_item_ctn"></a>
+                </div>
+                <div class="dd_carousel_item">
+                    <div class="dd_carousel_img_container">
+                        <img src="./assets/deals/img-1.png" alt="">
+                        <a href="" class="dd_carousel_ctn">Book Now</a>
+                    </div>
+                    <div class="dd_carousel_body">
+                        <div class="dd_carousel_body-top">
+                            <p class="title">Madrid</p>
+                            <span class="rating">
+                                <img src="./assets/deals/star.png" alt="">
+                                <span>4.8</span>
+                            </span>
+                        </div>
+                        <div class="dd_carousel_body-bottom">
+                            <span class="location">
+                                <img src="./assets/deals/pointer.png" alt="">
+                                <span>Spain</span>
+                            </span>
+                            <span class="price">
+                                <del>$950</del>
+                                <span>$850</span>
+                            </span>
+                        </div>
+                    </div>
+                    <a href="" class="dd_carousel_item_ctn"></a>
+                </div>
+                <div class="dd_carousel_item">
+                    <div class="dd_carousel_img_container">
+                        <img src="./assets/deals/img-2.png" alt="">
+                        <a href="" class="dd_carousel_ctn">Book Now</a>
+                    </div>
+                    <div class="dd_carousel_body">
+                        <div class="dd_carousel_body-top">
+                            <p class="title">Madrid</p>
+                            <span class="rating">
+                                <img src="./assets/deals/star.png" alt="">
+                                <span>4.8</span>
+                            </span>
+                        </div>
+                        <div class="dd_carousel_body-bottom">
+                            <span class="location">
+                                <img src="./assets/deals/pointer.png" alt="">
+                                <span>Spain</span>
+                            </span>
+                            <span class="price">
+                                <del>$950</del>
+                                <span>$850</span>
+                            </span>
+                        </div>
+                    </div>
+                    <a href="" class="dd_carousel_item_ctn"></a>
+                </div>
+                <div class="dd_carousel_item">
+                    <div class="dd_carousel_img_container">
+                        <img src="./assets/deals/img-3.png" alt="">
+                        <a href="" class="dd_carousel_ctn">Book Now</a>
+                    </div>
+                    <div class="dd_carousel_body">
+                        <div class="dd_carousel_body-top">
+                            <p class="title">Madrid</p>
+                            <span class="rating">
+                                <img src="./assets/deals/star.png" alt="">
+                                <span>4.8</span>
+                            </span>
+                        </div>
+                        <div class="dd_carousel_body-bottom">
+                            <span class="location">
+                                <img src="./assets/deals/pointer.png" alt="">
+                                <span>Spain</span>
+                            </span>
+                            <span class="price">
+                                <del>$950</del>
+                                <span>$850</span>
+                            </span>
+                        </div>
+                    </div>
+                    <a href="" class="dd_carousel_item_ctn"></a>
+                </div>
+                <div class="dd_carousel_item">
+                    <div class="dd_carousel_img_container">
+                        <img src="./assets/deals/img-4.png" alt="">
+                        <a href="" class="dd_carousel_ctn">Book Now</a>
+                    </div>
+                    <div class="dd_carousel_body">
+                        <div class="dd_carousel_body-top">
+                            <p class="title">Madrid</p>
+                            <span class="rating">
+                                <img src="./assets/deals/star.png" alt="">
+                                <span>4.8</span>
+                            </span>
+                        </div>
+                        <div class="dd_carousel_body-bottom">
+                            <span class="location">
+                                <img src="./assets/deals/pointer.png" alt="">
+                                <span>Spain</span>
+                            </span>
+                            <span class="price">
+                                <del>$950</del>
+                                <span>$850</span>
+                            </span>
+                        </div>
+                    </div>
+                    <a href="" class="dd_carousel_item_ctn"></a>
+                </div>
+                <div class="dd_carousel_item">
+                    <div class="dd_carousel_img_container">
+                        <img src="./assets/deals/img-1.png" alt="">
+                        <a href="" class="dd_carousel_ctn">Book Now</a>
+                    </div>
+                    <div class="dd_carousel_body">
+                        <div class="dd_carousel_body-top">
+                            <p class="title">Madrid</p>
+                            <span class="rating">
+                                <img src="./assets/deals/star.png" alt="">
+                                <span>4.8</span>
+                            </span>
+                        </div>
+                        <div class="dd_carousel_body-bottom">
+                            <span class="location">
+                                <img src="./assets/deals/pointer.png" alt="">
+                                <span>Spain</span>
+                            </span>
+                            <span class="price">
+                                <del>$950</del>
+                                <span>$850</span>
+                            </span>
+                        </div>
+                    </div>
+                    <a href="" class="dd_carousel_item_ctn"></a>
+                </div>
+                <div class="dd_carousel_item">
+                    <div class="dd_carousel_img_container">
+                        <img src="./assets/deals/img-2.png" alt="">
+                        <a href="" class="dd_carousel_ctn">Book Now</a>
+                    </div>
+                    <div class="dd_carousel_body">
+                        <div class="dd_carousel_body-top">
+                            <p class="title">Madrid</p>
+                            <span class="rating">
+                                <img src="./assets/deals/star.png" alt="">
+                                <span>4.8</span>
+                            </span>
+                        </div>
+                        <div class="dd_carousel_body-bottom">
+                            <span class="location">
+                                <img src="./assets/deals/pointer.png" alt="">
+                                <span>Spain</span>
+                            </span>
+                            <span class="price">
+                                <del>$950</del>
+                                <span>$850</span>
+                            </span>
+                        </div>
+                    </div>
+                    <a href="" class="dd_carousel_item_ctn"></a>
+                </div>
+            </div>
+            <div class="dd_carousel_btn">
+                <div class="dd_carousel_btnnext"></div>
+                <div class="dd_carousel_btnprev"></div>
+            </div>
+        </div>
+    </section>
+    <section class="container vp m-auto section-padding">
+        <h3 class="vp_title">Best <span> vacation plan </span></h3>
+        <p class="vp_para">Plan your perfect vacation with our travel agency. Choose among hundreds of all-inclusive
+            offers!</p>
+
+        <div class="vp_carousel_container">
+            <div class="vp_carousel_btn">
+                <div class="vp_carousel_btnnext"></div>
+                <div class="vp_carousel_btnprev"></div>
+            </div>
+            <div class="vp_carousel">
+                <div class="vp_carousel_item">
+                    <img src="./assets/vacation/img-1.png" alt="">
+                    <div class="vp_carousel_body">
+                        <p class="vp_carousel_body-top">
+                            <span>Rome, Italty</span>
+                            <span>$5,42k</span>
+                        </p>
+                        <span class="vp_carousel_body-bottom">
+                            <span class="days">
+                                <img src="./assets/vacation/arrow.png" alt="">
+                                <span>10 Days Trip</span>
+                            </span>
+                            <span class="rating">
+                                <img src="./assets/vacation/star.png" alt="">
+                                <span>4.8</span>
+                            </span>
+                        </span>
+                    </div>
+                </div>
+                <div class="vp_carousel_item">
+                    <img src="./assets/vacation/img-2.png" alt="">
+                    <div class="vp_carousel_body">
+                        <p class="vp_carousel_body-top">
+                            <span>London,UK</span>
+                            <span>$5,42k</span>
+                        </p>
+                        <span class="vp_carousel_body-bottom">
+                            <span class="days">
+                                <img src="./assets/vacation/arrow.png" alt="">
+                                <span>10 Days Trip</span>
+                            </span>
+                            <span class="rating">
+                                <img src="./assets/vacation/star.png" alt="">
+                                <span>4.8</span>
+                            </span>
+                        </span>
+                    </div>
+                </div>
+                <div class="vp_carousel_item">
+                    <img src="./assets/vacation/img-3.png" alt="">
+                    <div class="vp_carousel_body">
+                        <p class="vp_carousel_body-top">
+                            <span>Osaka,Japan</span>
+                            <span>$5,42k</span>
+                        </p>
+                        <span class="vp_carousel_body-bottom">
+                            <span class="days">
+                                <img src="./assets/vacation/arrow.png" alt="">
+                                <span>10 Days Trip</span>
+                            </span>
+                            <span class="rating">
+                                <img src="./assets/vacation/star.png" alt="">
+                                <span>4.8</span>
+                            </span>
+                        </span>
+                    </div>
+                </div>
+                <div class="vp_carousel_item">
+                    <img src="./assets/vacation/img-1.png" alt="">
+                    <div class="vp_carousel_body">
+                        <p class="vp_carousel_body-top">
+                            <span>Rome, Italty</span>
+                            <span>$5,42k</span>
+                        </p>
+                        <span class="vp_carousel_body-bottom">
+                            <span class="days">
+                                <img src="./assets/vacation/arrow.png" alt="">
+                                <span>10 Days Trip</span>
+                            </span>
+                            <span class="rating">
+                                <img src="./assets/vacation/star.png" alt="">
+                                <span>4.8</span>
+                            </span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+    <section class="container about_us m-auto section-padding">
+        <div class="about_us_left">
+            <h5 class="about_us_title">What people say <br> <span> about Us.</span></h5>
+            <p class="about_us_para">Our Clients send us bunch of smilies with our services <br> and we love them.</p>
+            <div class="about_us_carousel_btn">
+                <div class="about_us_carousel_btnnext"></div>
+                <div class="about_us_carousel_btnprev"></div>
+            </div>
+        </div>
+        <div class="about_us_right">
+            <div class="au_carousel">
+
+                <div class="au_carousel_item">
+                    <img src="./assets/aboutus/profile.png" alt="">
+                    <p class="au_carousel_item_para">On the Windows talking painted pasture yet its express parties use.
+                        Sure last upon he same as
+                        knew next. Of believed or diverted no.
+                    </p>
+                    <p class="au_carousel_item_author">
+
+                        <span>Mike taylor</span>
+                        <span>Lahore, India</span>
+                    </p>
+                </div>
+                <div class="au_carousel_item">
+                    <img src="./assets/aboutus/profile.png" alt="">
+                    <p class="au_carousel_item_para">On the Windows talking painted pasture yet its express parties use.
+                        Sure last upon he same as
+                        knew next. Of believed or diverted no.</p>
+                    <p class="au_carousel_item_author">
+                        <span>Mike taylor</span>
+                        <span>Lahore, USA</span>
+                    </p>
+                </div>
+                <div class="au_carousel_item">
+                    <img src="./assets/aboutus/profile.png" alt="">
+                    <p class="au_carousel_item_para">On the Windows talking painted pasture yet its express parties use.
+                        Sure last upon he same as
+                        knew next. Of believed or diverted no.</p>
+                    <p class="au_carousel_item_author">
+                        <span>Mike taylor</span>
+                        <span>Lahore, CANADA</span>
+                    </p>
+                </div>
+                <div class="au_carousel_item">
+                    <img src="./assets/aboutus/profile.png" alt="">
+                    <p class="au_carousel_item_para">On the Windows talking painted pasture yet its express parties use.
+                        Sure last upon he same as
+                        knew next. Of believed or diverted no.</p>
+                    <p class="au_carousel_item_author">
+                        <span>Mike taylor</span>
+                        <span>Lahore, NZ</span>
+                    </p>
+                </div>
+                <div class="au_carousel_item">
+                    <img src="./assets/aboutus/profile.png" alt="">
+                    <p class="au_carousel_item_para">On the Windows talking painted pasture yet its express parties use.
+                        Sure last upon he same as
+                        knew next. Of believed or diverted no.</p>
+                    <p class="au_carousel_item_author">
+                        <span>Mike taylor</span>
+                        <span>Lahore, Pakistan</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <section class="container blog m-auto section-padding">
+        <h3 class="blog_title">Get update with <span>latest blog</span></h3>
+
+        <div class="blog_carousel_container">
+            <div class="blog_carousel">
+                <div class="blog_carousel_item">
+                    <div class="blog_carousel_img_container">
+                        <img src="./assets/blog/img-3.png" alt="">
+                    </div>
+                    <div class="blog_carousel_body">
+                        <p>The Amazing Difference a Year of Travelling .</p>
+                        <p>July 27, 2001</p>
+                    </div>
+                </div>
+                <div class="blog_carousel_item">
+                    <div class="blog_carousel_img_container">
+                        <img src="./assets/blog/img-1.png" alt="">
+                    </div>
+                    <div class="blog_carousel_body">
+                        <p>The Amazing Difference a Year of Travelling .</p>
+                        <p>July 27, 2002</p>
+                    </div>
+                    <a href="" class="blog_carousel_item_ctn"></a>
+                </div>
+                <div class="blog_carousel_item">
+                    <div class="dd_carousel_img_container">
+                        <img src="./assets/blog/img-2.png" alt="">
+                    </div>
+                    <div class="blog_carousel_body">
+                        <p>The Amazing Difference a Year of Travelling .</p>
+                        <p>July 27, 2003</p>
+                    </div>
+                    <a href="" class="blog_carousel_item_ctn"></a>
+                </div>
+                <div class="blog_carousel_item">
+                    <div class="blog_carousel_img_container">
+                        <img src="./assets/blog/img-4.png" alt="">
+                    </div>
+                    <div class="blog_carousel_body">
+                        <p>The Amazing Difference a Year of Travelling .</p>
+                        <p>July 27, 2004</p>
+                    </div>
+                    <a href="" class="blog_carousel_item_ctn"></a>
+                </div>
+                <div class="blog_carousel_item">
+                    <div class="blog_carousel_img_container">
+                        <img src="./assets/blog/img-3.png" alt="">
+                    </div>
+                    <div class="blog_carousel_body">
+                        <p>The Amazing Difference a Year of Travelling .</p>
+                        <p>July 27, 2005</p>
+                    </div>
+                    <a href="" class="blog_carousel_item_ctn"></a>
+                </div>
+                <div class="blog_carousel_item">
+                    <div class="blog_carousel_img_container">
+                        <img src="./assets/blog/img-1.png" alt="">
+                    </div>
+                    <div class="blog_carousel_body">
+                        <p>The Amazing Difference a Year of Travelling .</p>
+                        <p>July 27, 2006</p>
+                    </div>
+                    <a href="" class="blog_carousel_item_ctn"></a>
+                </div>
+                <div class="blog_carousel_item">
+                    <div class="blog_carousel_img_container">
+                        <img src="./assets/blog/img-2.png" alt="">
+                    </div>
+                    <div class="blog_carousel_body">
+                        <p>The Amazing Difference a Year of Travelling .</p>
+                        <p>July 27, 2007</p>
+                    </div>
+                    <a href="" class="blog_carousel_item_ctn"></a>
+                </div>
+            </div>
+            <div class="blog_carousel_btn">
+
+            </div>
+        </div>
+    </section>
+
+    <section class="container subscribe m-auto section-padding">
+        <h6 class="subscribe_title">
+            Subscribe and get exclusive deals & offer
+        </h6>
+        <div class="subscribe_input">
+            <input type="text">
+            <label for="" class="">Enter Your Email</label>
+            <img src="./assets/subcriptions/email.png" alt="">
+        </div>
+    </section>
+    <footer class="container footer m-auto section-padding">
+        <div class="footer_left">
+            <img src="./assets/navbar/Logo.png" alt="" class="logo">
+            <p class="footer_para">Book your trip in minute, get full <br>
+                Control for much longer.</p>
+            <div class="icons">
+                <img src="./assets/footer/fb.png" alt="">
+                <img src="./assets/footer/insta.png" alt="">
+                <img src="./assets/footer/x.png" alt="">
+            </div>
+        </div>
+        <div class="footer_right">
+            <div>
+                <p>Company</p>
+                <ul>
+                    <li>About</li>
+                    <li>Careers</li>
+                    <li>Logistic</li>
+                    <li>Privacy & Policy</li>
+                </ul>
+            </div>
+            <div>
+                <p>Contact</p>
+                <ul>
+                    <li>Help/FAQ</li>
+                    <li>Press</li>
+                    <li>Affilates</li>
+                </ul>
+            </div>
+            <div>
+                <p>More</p>
+                <ul>
+                    <li>Press Centre</li>
+                    <li>Our Blog</li>
+                    <li>Low fare tips</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
